@@ -1,0 +1,51 @@
+.scrollbox {
+    overflow: auto;
+    height: 388px;
+    box-sizing: content-box;
+    width: 990px;
+    max-width: 100%;
+    
+}
+
+.billing-scrollbox {
+    width: 632px;
+    height: 306px;
+}
+
+.users-scrollbox {
+    height: 350px;
+}
+
+.notes-scrollbox {
+    height: 305px
+}
+
+.track {
+    width: 14px;
+    background-color: #d8d8d8;
+    border: 1px solid #c2c2c2;
+    box-sizing: content-box;
+}
+
+.handle {
+    width: 14px;
+    background-color: #d11925;
+}
+
+.handle .top,
+.handle .bottom {
+    position: absolute;
+    left: 0;
+    width: 14px;
+    height: 16px;
+}
+
+.handle .top {
+    top: 0;
+    background: url(../images/scroll_top.jpg) no-repeat;
+}
+
+.handle .bottom {
+    bottom: 0;
+    background: url(../images/scroll_btm.jpg) no-repeat;
+}

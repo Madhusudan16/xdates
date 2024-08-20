@@ -1,0 +1,14 @@
+.feedback-success {
+    color: #fff !important;
+    background-color: #3c9100 !important;
+    border-color: #4cae4c !important;
+  }
+  .error {
+    color :#d21a26;
+  }
+  .loading-image {
+   position: fixed;
+  }
+  .loader {
+    z-index: 9999;
+  }

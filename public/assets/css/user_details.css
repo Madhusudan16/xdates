@@ -1,0 +1,25 @@
+.trial-extend {
+   padding-top:15px;
+   }
+   .extend-btn{
+   width:40%;
+   }
+   #extendTrialText {
+   resize:vertical;
+   }
+   .my-comment {
+   resize:vertical;
+   width:95%;
+   }
+   .note-detail {
+   width:50%;
+   }
+   .note-section-tbl {
+   width:99% !important;
+   }
+   .log-section-tbl {
+   width:99% !important;
+   }
+   .allPlans {
+      width:98% !important;
+   }

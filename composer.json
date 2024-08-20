@@ -1,0 +1,68 @@
+{
+    "name": "laravel/laravel",
+    "description": "The Laravel Framework.",
+    "keywords": ["framework", "laravel"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=5.5.9",
+        "laravel/framework": "5.2.*",
+		"laravelcollective/html": "5.2.*",
+		"proengsoft/laravel-jsvalidation": "~1.1",
+        "laravel/socialite": "^2.0",
+        "waavi/url-shortener": "1.0.x",
+	"authorizenet/authorizenet": "1.8.9",
+	"jms/serializer": "serializer-master-dev as 1.0",
+        "barryvdh/laravel-snappy": "^0.3.1",
+        "h4cc/wkhtmltopdf-i386": "0.12.x",
+        "h4cc/wkhtmltopdf-amd64": "^0.12.3",
+        "twilio/sdk": "^5.4" 
+    },
+  "repositories": [{
+       "type": "vcs",
+       "url": "https://github.com/goetas/serializer.git"
+  }],	
+    "require-dev": {
+        "fzaninotto/faker": "~1.4",
+        "mockery/mockery": "0.9.*",
+        "phpunit/phpunit": "~4.0",
+        "symfony/css-selector": "2.8.*|3.0.*",
+        "symfony/dom-crawler": "2.8.*|3.0.*"
+    },
+    "autoload": {
+        "classmap": [
+            "database"
+        ],
+         "files": [
+            "app/helpers.php"
+        ],
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/TestCase.php"
+        ]
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "php -r \"copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "php artisan key:generate"
+        ],
+        "post-install-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postInstall",
+            "php artisan optimize"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "php artisan optimize",
+            "php artisan vendor:publish --provider=\"Proengsoft\\JsValidation\\JsValidationServiceProvider\" --tag=public --force"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
+    }
+}
